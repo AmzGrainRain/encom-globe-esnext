@@ -86,6 +86,30 @@
         requestAnimationFrame(renderer)
       }
 
+      const reload = () => {
+        window.earth.destroy()
+        createEarth({
+          font: 'monospace',                            // 字体
+          tiles: grid.tiles,                       // tiles 数据
+          data: data.slice(),                       // 标记数据
+          markerColor: '#ffcc00',                       // 标记颜色
+          baseColor: '#ffcc00',                         // 基本颜色
+          pinColor: '#8fd8d8',                          // 点颜色
+          satelliteColor: '#ff0000',                    // 卫星颜色
+          maxPins: 500,                                 // 最大点数量 [10, 1000]
+          maxMarkers: 4,                                // 最大标记数量 [1, 10]
+          dayLength: 1000 * 28,                         // 转动速度 [1, 120]
+          scale: 1,                                     // 放大倍数
+          introLinesDuration: 1000,                     // 过渡速度
+          viewAngle: 0.1,                               // 视角调整 [-1.570, 1.570]
+          enableConnectPoints: true,                    // 启用连接点
+          enableSatellites: true,                       // 启用卫星渲染
+          satelliteCoreColor: 'ff0000',                 // 卫星内部小圆点颜色
+          satelliteNumWaves: 8,                         // 卫星转动速度 [3, 12]
+          satelliteCoreColorAltitude: 1.3               // 卫星高度 [1, 3]
+        })
+      }
+
       // 页面加载完成时加载
       window.onload = () => {
         window.addEventListener(

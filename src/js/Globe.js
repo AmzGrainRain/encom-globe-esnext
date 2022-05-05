@@ -347,6 +347,7 @@ class Globe {
     tiles: [],
     viewAngle: 0
   }
+  
   constructor(width, height, opts = {}) {
     this.baseSampleMultiplier = 0.7
     this.width = width

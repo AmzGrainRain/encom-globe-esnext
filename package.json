@@ -1,14 +1,14 @@
 {
-  "name": "encom-globe",
+  "name": "encom-globe-esnext",
   "version": "0.5.4",
-  "description": "encom-globe",
+  "description": "encom-globe-esnext",
   "repository": {
     "type": "git",
-    "url": "git://github.com/arscan/encom-globe.git"
+    "url": "git://github.com/KiHanLee/encom-globe-esnext.git"
   },
   "license": "MIT",
   "author": "robscanlon@gmail.com",
-  "main": "src/Globe.js",
+  "main": "src/js/Globe.js",
   "scripts": {
     "build": "grunt build",
     "buildgrid": "bin/buildgrid -r 500 -o grid.js -m resources/equirectangle_projection.png",
